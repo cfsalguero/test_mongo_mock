@@ -3,7 +3,7 @@
 I wrote a small web service that uses gorilla/mux as a router and MongoDB to store items information.
 As I saw many persons asking for testing/moking examples, I've decided to write one.
 
-Let's take a look at the program first. (This code is also in 
+Let's take a look at the program first. (View on [GitHub](https://github.com/cfsalguero/test_mongo_mock)) 
 
 The main file: `test.go`
 
