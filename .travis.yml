@@ -1,0 +1,21 @@
+language: go
+go:
+  - 1.1.2
+  - 1.2
+  - tip
+env:
+  - GOARCH=amd64
+before_install:
+  - go install code.google.com/p/gomock/gomock
+  - go install code.google.com/p/gomock/mockgen
+  - go install code.google.com/p/go.tools/cmd/goimports
+  - go get github.com/qur/withmock
+  - go get github.com/qur/withmock/mocktest
+script:
+  - withmock go test ./...
+notifications:
+  email:
+    recipients:
+      - csalguero@gmail.com
+    on_success: change
+    on_failure: always
